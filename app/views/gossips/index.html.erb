@@ -1,0 +1,30 @@
+<<h1 class="btn btn-outline-warning" >Bienvenue dans mon site BLALBLA BOOOM POTINS!!!!!  </h1>
+<!--
+<div> 
+	<h2> <%= @yes %>  </h2> 
+</div>
+-->
+<p>Veuillez vous inscrie dans ce <%= link_to "lien", new_gossip_path%> </br>
+<p>	
+voici la liste des potins : </br>
+<p>
+<%=link_to "Nouveau potin", controller: "gossips",	
+	 action: "new"%>
+</p>
+
+	<ul>
+		<% @potins.length.times do |i| %>
+		<li>
+		<%= @potins[i].user.first_name %> </br> 
+		<% params[:i] = @potins[i].user.first_name %></br>
+		Titre du potin: <%=link_to @potins[i].title, gossip_path(@potins[i].id) %><br>
+		  <%=link_to "Modifier", edit_gossip_path(@potins[i].id) %><br>
+		 <%=link_to "Supprimer", {controller: "gossips",
+		 action: "destroy", id:@potins[i].id}, data:{confirm:"Etes-vous sur de le Supprimer ??", method:"DELETE"}%>
+			</br>
+		 </li> 
+		<% end %>	
+	</ul>		
+</p>
+ 
+ 

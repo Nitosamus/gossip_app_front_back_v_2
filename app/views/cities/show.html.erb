@@ -1,0 +1,12 @@
+<h1>Description de la ville de : <%= @city_name %>
+<p> Nom: <%= @city.name %> <br><br>
+	Liste des potins: <br><br>
+	<ul>
+	<% @users.length.times do |i| %>
+		<% @users[i].gossips.length.times do |k| %>
+		<li>titre:<%= @users[i].gossips[k].title %></li>
+		<li>Contenues: <%=@users[i].gossips[k].content%></li>
+		<% end %>
+		<% end %>
+	</ul>
+</p>

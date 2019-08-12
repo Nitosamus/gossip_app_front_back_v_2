@@ -1,0 +1,24 @@
+
+<h1>Modification d'un Potin:</h1><br><br>
+
+
+<%=form_for @gossip do |f|%>
+<div class="form-group">
+<label>Titre</label>
+<%=f.text_field :title, class: "form-control"%>
+</div>
+<div class="form-group">
+<label> Contenu </label>
+<%= f.text_area :content, class: "form-control", size: "80 * 30"%>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary">Enregister
+</button> 
+</div>
+<%end%>
+
+
+
+
+
+

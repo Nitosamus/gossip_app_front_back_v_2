@@ -1,0 +1,12 @@
+<h1>Modification du commentaire:</h1><br><br>
+<%=form_for @comment do |f|%>
+<div class="form-group">
+<label>Nouveau commentaire </label>
+<%=f.text_field :content, class: "form-control"%>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary">Enregister
+</button> 
+</div>
+<%end%>
+<%= link_to "<button class='btn btn-danger'>Supprimer<button>".html_safe, gossip_comment_path(params[:gossip_id], params[:id]), method: :delete, data:{confirm: "are you sure???"}%>

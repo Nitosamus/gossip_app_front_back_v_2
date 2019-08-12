@@ -1,0 +1,9 @@
+<h1>Votre commentaire ici:</h1>
+<%=form_for @comment do |f|%>
+<div class="form-group">
+<label>commenter</label><br>
+<%=f.text_field :content, class: "form-control", size: "70 *70", class:"btn btn-outline-info" %>
+<div class="form-group">
+<button type="submit" class="btn btn-success">ENVOYER</button> 
+<%end%>
+</div>
